@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="utility.css">
+    <title>Musica</title>
+</head>
+
+<body>
+    <!-- <img src = "logo.svg" alt=" "> -->
+    <div class="container flex bg-black">
+        <div class="left">
+
+            <div class="home bg-grey rounded margin1 padding1">
+                <div class="logo"><img src="logo.svg" alt="musica logo">Musica.</div>
+                <ul>
+                    <li>
+                        <img class="invert" src="home.svg" alt="home">Home
+                    </li>
+                    <li>
+                        <img class="invert" src="search.svg" alt="search">Search
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="library bg-grey rounded margin1 padding1">
+                <div class="heading">
+                    <li>
+                        <img class="invert" src="playlist.svg" alt="playlist"> Your Library
+                    </li>
+                </div>
+
+                <div class="songlibrary">
+
+                    <div class="songpic">
+                        <img src="music.svg">
+                    </div>
+
+                    <div class="songlist">
+                        <ul>
+
+                            <div class="info">
+                                <div>song name</div>
+                                <div>song artist</div>
+                            </div>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer">
+                    <a href="https://www.spotify.com/in-en/legal/">Legal</a>
+                    <a href="https://www.spotify.com/in-en/safetyandprivacy/">Safety & Privacy Center
+                        <a href="https://www.spotify.com/in-en/legal/privacy-policy/">Privacy Policy
+                            <a href="https://www.spotify.com/in-en/legal/cookies-policy/">Cookies</a>
+                            <a href="https://www.spotify.com/in-en/legal/privacy-policy/#s3">About Ads</a>
+                            <a href="https://www.spotify.com/in-en/accessibility/">Accessibility</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="right bg-grey rounded">
+            <div class="header">
+                <div class="nav">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000"
+                        fill="none">
+                        <path d="M15 6C15 6 9.00001 10.4189 9 12C8.99999 13.5812 15 18 15 18" stroke="#ffffff"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000"
+                        fill="none">
+                        <path d="M9.00005 6C9.00005 6 15 10.4189 15 12C15 13.5812 9 18 9 18" stroke="#ffffff"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <div class="buttons">
+                    <button class="signupbtn">Sign up</button>
+                    <button class="loginbtn">Log in</button>
+                </div>
+
+            </div>
+
+            <div class="musica-playlists">
+                Musica Playlists
+            </div>
+
+            <div class="cardContainer">
+                <div class="card ">
+
+                    <div class="play">
+                        <?xml version="1.0" encoding="utf-8"?>
+                        <svg width="35px" height="35px" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="11" stroke="black" stroke-width="1.5" fill="bisque" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M7.5 4.59863L18.6021 12L7.5 19.4014V4.59863Z" fill="black" />
+                        </svg>
+
+
+                    </div>
+                    <img src="happy.jpg">
+                    <div class="card-text">
+                        <p style="color: white; font-size: 18px; margin-left: 8px;">Happy Hits</p>
+                        <p style="color: grey; font-size: 14px; margin-left: 8px;">hits to boost your mood</p>
+                    </div>
+                </div>
+
+                <div class="card ">
+                    <img src="sad.jpg">
+                    <div class="card-text">
+                        <p style="color: white; font-size: 18px; margin-left: 8px;">Sad Hits</p>
+                        <p style="color: grey; font-size: 14px; margin-left: 8px;">hits to relieve your pain</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="playbar">
+                <div class="songinfo">
+
+                </div>
+                <div class="songbuttons">
+                    <img src="prevsong.svg">
+                    <img src="playsong.svg">
+                    <img src="nextsong.svg">
+                </div>
+                <div class="songtime">
+
+                </div>
+            </div>
+            <script src="script.js"></script>
+</body>
+
+</html>
