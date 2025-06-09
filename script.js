@@ -17,24 +17,33 @@ async function getSongs() {
 }
 
 async function main() {
-    //get list of all songs
+  //get list of all songs
   let songs = await getSongs();
   console.log(songs);
 
-  let songUL = document.querySelector(".songlist").getElementsByTagName("ul")[0];
-  for (const song of songs){
-    songUL.innerHTML = songUL.innerHTML + `<li> ${song.replaceAll("-",  " ")} </li>`;
+  let songUL = document
+    .querySelector(".songlist")
+    .getElementsByTagName("ul")[0];
+  for (const song of songs) {
+    songUL.innerHTML = songUL.innerHTML + `<li><img src="music.svg" alt="music icon">
+                            <div class="info">
+                                <div> ${song.replaceAll("-", " ")}</div>
+                                <div>Kavish</div>
+                            </div>
+                            <img src="playsong.svg" class="play-button" alt="play button">
+                       
+
+     </li>`;
   }
 
   //play the first song
   var audio = new Audio(songs[0]);
   audio.play();
 
-  audio.addEventListener("loadeddata", () =>{
+  audio.addEventListener("loadeddata", () => {
     let duration = audio.duration;
     console.log(audio.duration, audio.currentSrc, audio.currentTime);
   });
-
 }
 
 main();

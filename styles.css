@@ -1,11 +1,8 @@
 * {
-  /* *is a universal selector. used to globally define. therefore applies helvetica for whole code*/
   font-family: Helvetica, Arial, sans-serif;
-}
-
-* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -44,7 +41,7 @@ body {
   width: 20px;
   font-weight: bold;
   align-items: center;
-  white-space: nowrap; /* Prevents text from breaking into multiple lines */
+  white-space: nowrap;
   padding-top: 4px;
   padding: 10px 4px;
   font-size: 16px;
@@ -84,7 +81,7 @@ body {
   width: 20px;
   font-weight: bold;
   align-items: center;
-  white-space: nowrap; /* Prevents text from breaking into multiple lines */
+  white-space: nowrap;
   padding-top: 15px;
   padding-left: 10px;
   font-size: 16px;
@@ -98,7 +95,6 @@ body {
 }
 
 .header > * {
-  /* > selects only direct children of header. without it, it will select children + grandchildren */
   padding: 15px;
 }
 
@@ -127,7 +123,7 @@ body {
 .card img {
   width: 184px;
   object-fit: contain;
-  padding: 8px 8px 8px 8px; /* top right bottom left */
+  padding: 8px;
 }
 
 .cardContainer {
@@ -144,7 +140,7 @@ body {
   top: 155px;
   right: 10px;
   opacity: 0;
-  transform: translateY(10px); /* Moves 10px downward */
+  transform: translateY(10px);
   transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
@@ -166,6 +162,7 @@ body {
   cursor: pointer;
   font-size: 13px;
 }
+
 .signupbtn:hover {
   color: white;
   font-size: 15px;
@@ -185,6 +182,7 @@ body {
   width: 60px;
   height: 30px;
 }
+
 .loginbtn:hover {
   font-size: 15px;
   color: black;
@@ -192,31 +190,72 @@ body {
   width: 80px;
 }
 
-.playbar{
-    position: absolute;
-    bottom: 0;
-    background-color: bisque;
-    color: black;
-    width: 98.7%;
-    padding: 8px;
-    border-radius: 7px;
+.playbar {
+  position: absolute;
+  bottom: 0;
+  background-color: bisque;
+  color: black;
+  width: 98.7%;
+  padding: 8px;
+  border-radius: 7px;
 }
 
-.songbuttons{
+.songbuttons {
   justify-content: center;
   display: flex;
   gap: 25px;
 }
 
-.songlist{
-  margin-left: 80px;
-  display: flex;
-  margin-top: 150px;
+.songlist {
+  height: 700px;
+  overflow: auto;
+  margin-bottom: 44px;
 }
 
-.songlist ul li{
-  list-style: none;
+.songlist ul li {
+  list-style-type: decimal;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  padding: 13px;
+  border: 1px solid rgba(146, 143, 143, 0.491);
+  margin: 12px 0;
+  border-radius: 5px;
+  justify-content: space-between;
+}
+
+.songlist ul {
+  padding: 0 12px;
+  margin-right: 20px;
+}
+
+.song-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.song-item img {
+  width: 32px;
+  height: 32px;
+}
+
+.song-item .info {
   display: flex;
   flex-direction: column;
-  row-gap: 30px;
+  flex-grow: 1;
+  align-items: flex-start;
+  text-align: left;
+  margin-left: 10px;
+}
+
+.song-item .play-button {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  cursor: pointer;
+  margin-left: auto;
 }
